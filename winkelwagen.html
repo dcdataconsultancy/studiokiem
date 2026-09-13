@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Winkelwagen — Studio Kiem</title>
+<meta name="description" content="Bekijk en pas je winkelwagen aan." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Gratis verzending in Nederland boven €100 · Afhalen in Hooglanderveen · Reparatieservice vanaf €15</div>
+
+  <header class="site-header">
+    <div class="bar">
+      <a href="index.html" class="wordmark">Studio Kiem</a>
+      <nav>
+        <button type="button" class="shop-toggle" id="shop-toggle" aria-expanded="false">Shop <span style="font-size: 8px; opacity: 0.6;">▾</span></button>
+        <a href="compatibiliteit.html">Compatibiliteit</a>
+        <a href="onderhoud.html">Onderhoud</a>
+        <a href="faq.html">FAQ</a>
+        <a href="kennisbank.html">Inspiratie</a>
+        <a href="over-ons.html">Over</a>
+      </nav>
+      <a href="winkelwagen.html" style="font-size: 11.5px; letter-spacing: 0.13em; text-transform: uppercase; white-space: nowrap;">Winkelwagen (<span id="cart-count">0</span>)</a>
+    </div>
+    <div class="shop-flyout" id="shop-flyout" hidden>
+      <div class="grid">
+        <div class="col">
+          <span class="eyebrow">Per schaal</span>
+          <a href="babyschaal-hoezen.html" class="big">Babyschaal hoezen</a>
+          <a href="shop.html" class="big">Peuterschaal hoezen</a>
+        </div>
+        <div class="col">
+          <span class="eyebrow">Per materiaal</span>
+          <a href="shop.html?materiaal=Merinowol" class="big">Merinowol</a>
+          <a href="shop.html?materiaal=Outdoor" class="big">Outdoor</a>
+          <a href="shop.html?materiaal=Mousseline" class="big">Mousseline</a>
+        </div>
+        <div class="col">
+          <span class="eyebrow">Compatibiliteit</span>
+          <a href="compatibiliteit-babyschaal.html" class="big">Melia babyschaal</a>
+          <a href="compatibiliteit-peuterschaal.html" class="big">Melia peuterschaal</a>
+        </div>
+        <div class="col service">
+          <span class="eyebrow">Service</span>
+          <a href="reparatieservice.html" class="small">Reparatieservice</a>
+          <a href="onderhoud.html" class="small">Onderhoud &amp; wassen</a>
+          <a href="shop.html" class="small">Alle hoezen bekijken</a>
+        </div>
+      </div>
+    </div>
+  </header>
+<main id="cart-app" style="max-width: 1340px; margin: 0 auto; padding: clamp(26px, 4vw, 48px) clamp(20px, 4vw, 56px) clamp(52px, 7vw, 100px);">
+  <h1 style="margin: 0 0 clamp(24px, 3vw, 40px); font-family: 'EB Garamond', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.08;">Winkelwagen</h1>
+
+  <div id="cart-empty" hidden style="display: flex; flex-direction: column; gap: 18px; align-items: flex-start; border-top: 1px solid rgba(52,48,42,0.16); padding-top: 30px;">
+    <span style="font-size: 15px; color: #554E45;">Je winkelwagen is nog leeg.</span>
+    <a href="shop.html" class="btn-tan" style="background: #A89684; color: #FFFDF9; padding: 14px 28px; font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase;">Bekijk de hoezen</a>
+  </div>
+
+  <div id="cart-filled" hidden style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(24px, 3vw, 52px); align-items: start;">
+    <div style="display: flex; flex-direction: column;">
+      <div id="cart-items"></div>
+      <div style="border-top: 1px solid rgba(52,48,42,0.16); padding-top: 20px;">
+        <a href="shop.html" class="link-underline">Verder winkelen</a>
+      </div>
+    </div>
+    <div style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.16); padding: clamp(20px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 14px;">
+      <span style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #8B7B64;">Overzicht</span>
+      <div style="display: flex; justify-content: space-between; font-size: 14px;"><span>Subtotaal</span><span id="cart-sub">€0,00</span></div>
+      <div id="cart-korting-row" hidden style="display: flex; justify-content: space-between; font-size: 14px; color: #6E7A5E;"><span>Korting</span><span id="cart-korting">€0,00</span></div>
+      <div style="display: flex; justify-content: space-between; font-size: 14px;"><span>Verzending</span><span id="cart-verzend">Gratis</span></div>
+      <span id="cart-bijna" hidden style="font-size: 12.5px; color: #7E6E58;">Nog <span id="cart-tekort">€0,00</span> tot gratis verzending.</span>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(52,48,42,0.16); padding-top: 14px;">
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 20px;">Totaal</span>
+        <span id="cart-totaal" class="serif" style="font-size: 22px;">€0,00</span>
+      </div>
+      <span style="font-size: 11.5px; color: #8B7B64;">Waarvan <span id="cart-btw">€0,00</span> btw</span>
+      <a href="afrekenen.html" class="btn-dark" style="display: block; text-align: center; border: none; padding: 15px 24px; font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 4px;">Naar afrekenen</a>
+      <span style="font-size: 12px; line-height: 1.6; color: #7E6E58;">Verzending naar huis of een pakketpunt, of afhalen in Hooglanderveen.</span>
+    </div>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="col">
+        <span class="serif" style="font-size: 24px; letter-spacing: 0.05em; color: #FFFDF9;">Studio Kiem</span>
+        <span class="muted" style="line-height: 1.65; max-width: 32ch;">Specialist in hoezen voor bakfietsschalen. Ontworpen voor Melia baby- en peuterschalen.</span>
+      </div>
+      <div class="col">
+        <span class="eyebrow">Shop</span>
+        <a href="babyschaal-hoezen.html" class="footer-link">Babyschaal hoezen</a>
+        <a href="shop.html" class="footer-link">Peuterschaal hoezen</a>
+        <a href="shop.html" class="footer-link">Alle materialen</a>
+      </div>
+      <div class="col">
+        <span class="eyebrow">Informatie</span>
+        <a href="compatibiliteit.html" class="footer-link">Compatibiliteit</a>
+        <a href="onderhoud.html" class="footer-link">Onderhoud</a>
+        <a href="faq.html" class="footer-link">Veelgestelde vragen</a>
+        <a href="kennisbank.html" class="footer-link">Kennisbank</a>
+      </div>
+      <div class="col">
+        <span class="eyebrow">Service</span>
+        <a href="reparatieservice.html" class="footer-link">Reparatieservice</a>
+        <span class="muted">Verzending &amp; afhalen</span>
+        <span class="muted">Retourneren</span>
+        <a href="over-ons.html" class="footer-link">Over Studio Kiem</a>
+      </div>
+      <div class="col">
+        <span class="eyebrow">Contact</span>
+        <span class="muted">hallo@studiokiem.nl</span>
+        <span class="muted">Instagram @studiokiem</span>
+        <span class="muted">Afhalen op afspraak,<br />Hooglanderveen</span>
+        <span style="font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(230,223,210,0.45);">gegevens nog te bevestigen</span>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 Studio Kiem · KvK 00000000 · Alle prijzen inclusief btw</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 20px;">Algemene voorwaarden · Privacy · Verzending</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" hidden>
+    <span id="toast-text"></span>
+    <a href="winkelwagen.html" class="link-underline-cream" style="color: #F6F1E8; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase;">Bekijk</a>
+  </div>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>

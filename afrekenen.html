@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Afrekenen — Studio Kiem</title>
+<meta name="description" content="Rond je bestelling af." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Gratis verzending in Nederland boven €100 · Afhalen in Hooglanderveen · Reparatieservice vanaf €15</div>
+
+  <header class="site-header">
+    <div class="bar">
+      <a href="index.html" class="wordmark">Studio Kiem</a>
+      <nav>
+        <button type="button" class="shop-toggle" id="shop-toggle" aria-expanded="false">Shop <span style="font-size: 8px; opacity: 0.6;">▾</span></button>
+        <a href="compatibiliteit.html">Compatibiliteit</a>
+        <a href="onderhoud.html">Onderhoud</a>
+        <a href="faq.html">FAQ</a>
+        <a href="kennisbank.html">Inspiratie</a>
+        <a href="over-ons.html">Over</a>
+      </nav>
+      <a href="winkelwagen.html" style="font-size: 11.5px; letter-spacing: 0.13em; text-transform: uppercase; white-space: nowrap;">Winkelwagen (<span id="cart-count">0</span>)</a>
+    </div>
+    <div class="shop-flyout" id="shop-flyout" hidden>
+      <div class="grid">
+        <div class="col">
+          <span class="eyebrow">Per schaal</span>
+          <a href="babyschaal-hoezen.html" class="big">Babyschaal hoezen</a>
+          <a href="shop.html" class="big">Peuterschaal hoezen</a>
+        </div>
+        <div class="col">
+          <span class="eyebrow">Per materiaal</span>
+          <a href="shop.html?materiaal=Merinowol" class="big">Merinowol</a>
+          <a href="shop.html?materiaal=Outdoor" class="big">Outdoor</a>
+          <a href="shop.html?materiaal=Mousseline" class="big">Mousseline</a>
+        </div>
+        <div class="col">
+          <span class="eyebrow">Compatibiliteit</span>
+          <a href="compatibiliteit-babyschaal.html" class="big">Melia babyschaal</a>
+          <a href="compatibiliteit-peuterschaal.html" class="big">Melia peuterschaal</a>
+        </div>
+        <div class="col service">
+          <span class="eyebrow">Service</span>
+          <a href="reparatieservice.html" class="small">Reparatieservice</a>
+          <a href="onderhoud.html" class="small">Onderhoud &amp; wassen</a>
+          <a href="shop.html" class="small">Alle hoezen bekijken</a>
+        </div>
+      </div>
+    </div>
+  </header>
+<main id="checkout-app" style="max-width: 1340px; margin: 0 auto; padding: clamp(26px, 4vw, 48px) clamp(20px, 4vw, 56px) clamp(52px, 7vw, 100px);">
+  <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: clamp(24px, 3vw, 40px);">
+    <h1 style="margin: 0; font-family: 'EB Garamond', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.08;">Afrekenen</h1>
+    <a href="winkelwagen.html" class="link-underline">Terug naar winkelwagen</a>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(24px, 3vw, 52px); align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: clamp(26px, 3vw, 40px);">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #8B7B64;">1 · Gegevens</span>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px;">
+          <input placeholder="E-mailadres" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.2); padding: 13px 14px; font-size: 13.5px; grid-column: 1 / -1;" />
+          <input placeholder="Voornaam" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.2); padding: 13px 14px; font-size: 13.5px;" />
+          <input placeholder="Achternaam" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.2); padding: 13px 14px; font-size: 13.5px;" />
+          <input placeholder="Straat en huisnummer" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.2); padding: 13px 14px; font-size: 13.5px; grid-column: 1 / -1;" />
+          <input placeholder="Postcode" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.2); padding: 13px 14px; font-size: 13.5px;" />
+          <input placeholder="Woonplaats" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.2); padding: 13px 14px; font-size: 13.5px;" />
+          <input placeholder="Telefoon (optioneel)" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.2); padding: 13px 14px; font-size: 13.5px; grid-column: 1 / -1;" />
+        </div>
+        <span style="font-size: 12px; color: #8B7B64;">We verzenden momenteel alleen binnen Nederland.</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #8B7B64;">2 · Verzending</span>
+        <div id="co-ship" style="display: flex; flex-direction: column; gap: 8px;">
+          <button type="button" data-ship="huis" style="background: #FFFDF9; border: 1.5px solid #34302A; padding: 16px 18px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px; text-align: left; color: #34302A;">
+            <span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 14px;">Verzending naar huis</span><span style="font-size: 12px; color: #7E6E58;">PostNL, 1–3 werkdagen</span></span>
+            <span data-ship-price style="font-size: 13.5px;">Gratis</span>
+          </button>
+          <button type="button" data-ship="pakketpunt" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.18); padding: 16px 18px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px; text-align: left; color: #34302A;">
+            <span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 14px;">Naar een pakketpunt</span><span style="font-size: 12px; color: #7E6E58;">Ophalen bij een punt in de buurt</span></span>
+            <span data-ship-price style="font-size: 13.5px;">Gratis</span>
+          </button>
+          <button type="button" data-ship="afhalen" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.18); padding: 16px 18px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px; text-align: left; color: #34302A;">
+            <span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 14px;">Afhalen in Hooglanderveen</span><span style="font-size: 12px; color: #7E6E58;">Op afspraak, meestal binnen een dag klaar</span></span>
+            <span data-ship-price style="font-size: 13.5px;">Gratis</span>
+          </button>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #8B7B64;">3 · Betaling</span>
+        <div id="co-pay" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr)); gap: 12px;">
+          <button type="button" data-pay="ideal" style="background: #FFFDF9; border: 1.5px solid #34302A; padding: 15px 16px; font-size: 13.5px; text-align: left; color: #34302A;">iDEAL</button>
+          <button type="button" data-pay="creditcard" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.18); padding: 15px 16px; font-size: 13.5px; text-align: left; color: #34302A;">Creditcard</button>
+          <button type="button" data-pay="bancontact" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.18); padding: 15px 16px; font-size: 13.5px; text-align: left; color: #34302A;">Bancontact</button>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #8B7B64;">4 · Nog iets?</span>
+        <textarea id="co-notes" placeholder="Opmerking bij je order — bijvoorbeeld een voorkeur voor afhaalmoment" rows="3" style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.2); padding: 13px 14px; font-size: 13.5px; resize: vertical; font-family: 'Work Sans', system-ui, sans-serif;"></textarea>
+        <button type="button" id="co-news" style="background: transparent; border: none; padding: 0; display: flex; align-items: center; gap: 10px; text-align: left; color: #34302A;">
+          <span style="width: 17px; height: 17px; border: 1px solid rgba(52,48,42,0.35); display: flex; align-items: center; justify-content: center; font-size: 11px;"><span id="co-news-mark">✓</span></span>
+          <span style="font-size: 13px; color: #554E45;">Houd me op de hoogte van nieuwe kleuren en materialen</span>
+        </button>
+      </div>
+    </div>
+    <div style="background: #FFFDF9; border: 1px solid rgba(52,48,42,0.16); padding: clamp(20px, 2.4vw, 28px); display: flex; flex-direction: column; gap: 14px;">
+      <span style="font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #8B7B64;">Jouw bestelling</span>
+      <div id="co-items"></div>
+      <div style="display: flex; gap: 8px;">
+        <input id="co-promo-input" placeholder="Kortingscode" style="flex: 1; min-width: 0; background: #F6F1E8; border: 1px solid rgba(52,48,42,0.2); padding: 11px 13px; font-size: 13px;" />
+        <button type="button" id="co-promo-btn" style="background: transparent; border: 1px solid rgba(52,48,42,0.3); padding: 11px 16px; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;">Toepassen</button>
+      </div>
+      <span id="co-promo-msg" hidden style="font-size: 12px; color: #6E7A5E;"></span>
+      <div style="display: flex; justify-content: space-between; font-size: 14px;"><span>Subtotaal</span><span id="co-sub">€0,00</span></div>
+      <div id="co-korting-row" hidden style="display: flex; justify-content: space-between; font-size: 14px; color: #6E7A5E;"><span>Korting</span><span id="co-korting">€0,00</span></div>
+      <div style="display: flex; justify-content: space-between; font-size: 14px;"><span>Verzending</span><span id="co-verzend">Gratis</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(52,48,42,0.16); padding-top: 14px;">
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 20px;">Totaal</span>
+        <span id="co-totaal" class="serif" style="font-size: 22px;">€0,00</span>
+      </div>
+      <span style="font-size: 11.5px; color: #8B7B64;">Waarvan <span id="co-btw">€0,00</span> btw · prijzen inclusief btw</span>
+      <button type="button" id="co-place" class="btn-tan" style="border: none; padding: 16px 24px; font-size: 11.5px; letter-spacing: 0.15em; text-transform: uppercase;">Bestelling plaatsen</button>
+      <span style="font-size: 11.5px; line-height: 1.6; color: #7E6E58;">Je ontvangt direct een orderbevestiging per e-mail. Prototype — er wordt niets afgerekend.</span>
+    </div>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="col">
+        <span class="serif" style="font-size: 24px; letter-spacing: 0.05em; color: #FFFDF9;">Studio Kiem</span>
+        <span class="muted" style="line-height: 1.65; max-width: 32ch;">Specialist in hoezen voor bakfietsschalen. Ontworpen voor Melia baby- en peuterschalen.</span>
+      </div>
+      <div class="col">
+        <span class="eyebrow">Shop</span>
+        <a href="babyschaal-hoezen.html" class="footer-link">Babyschaal hoezen</a>
+        <a href="shop.html" class="footer-link">Peuterschaal hoezen</a>
+        <a href="shop.html" class="footer-link">Alle materialen</a>
+      </div>
+      <div class="col">
+        <span class="eyebrow">Informatie</span>
+        <a href="compatibiliteit.html" class="footer-link">Compatibiliteit</a>
+        <a href="onderhoud.html" class="footer-link">Onderhoud</a>
+        <a href="faq.html" class="footer-link">Veelgestelde vragen</a>
+        <a href="kennisbank.html" class="footer-link">Kennisbank</a>
+      </div>
+      <div class="col">
+        <span class="eyebrow">Service</span>
+        <a href="reparatieservice.html" class="footer-link">Reparatieservice</a>
+        <span class="muted">Verzending &amp; afhalen</span>
+        <span class="muted">Retourneren</span>
+        <a href="over-ons.html" class="footer-link">Over Studio Kiem</a>
+      </div>
+      <div class="col">
+        <span class="eyebrow">Contact</span>
+        <span class="muted">hallo@studiokiem.nl</span>
+        <span class="muted">Instagram @studiokiem</span>
+        <span class="muted">Afhalen op afspraak,<br />Hooglanderveen</span>
+        <span style="font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(230,223,210,0.45);">gegevens nog te bevestigen</span>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 Studio Kiem · KvK 00000000 · Alle prijzen inclusief btw</span>
+      <span style="display: flex; flex-wrap: wrap; gap: 20px;">Algemene voorwaarden · Privacy · Verzending</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" hidden>
+    <span id="toast-text"></span>
+    <a href="winkelwagen.html" class="link-underline-cream" style="color: #F6F1E8; font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase;">Bekijk</a>
+  </div>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<main style="max-width: 1340px; margin: 0 auto; padding: clamp(26px, 4vw, 48px) clamp(20px, 4vw, 56px) clamp(56px, 7vw, 100px);">
+  <div style="display: flex; gap: 10px; font-size: 11.5px; letter-spacing: 0.06em; color: #8B7B64; margin-bottom: 26px;">
+    <a href="index.html" style="color: #8B7B64;">Home</a><span>/</span><span>Alle hoezen</span>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 16px; max-width: 62ch; margin-bottom: clamp(28px, 4vw, 48px);">
+    <h1 style="margin: 0; font-family: 'EB Garamond', Georgia, serif; font-weight: 400; font-size: clamp(30px, 4vw, 52px); line-height: 1.06;">Hoezen voor bakfietsschalen</h1>
+    <p style="margin: 0; font-size: 15px; line-height: 1.68; color: #554E45; text-wrap: pretty;">Alle hoezen van Studio Kiem, voor de Melia babyschaal en peuterschaal. Filter op schaal, materiaal, seizoen of kleur — of bekijk eerst de compatibiliteit als je twijfelt over je schaal.</p>
+  </div>
+
+  <div id="shop-filters" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: clamp(16px, 2vw, 32px); padding: clamp(18px, 2.4vw, 26px) 0; border-top: 1px solid rgba(52,48,42,0.14); border-bottom: 1px solid rgba(52,48,42,0.14); margin-bottom: clamp(26px, 4vw, 44px);">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8B7B64;">Schaal</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+        <button type="button" class="chip active" data-filter="fSchaal" data-value="Alle">Alle</button>
+        <button type="button" class="chip" data-filter="fSchaal" data-value="Babyschaal">Babyschaal</button>
+        <button type="button" class="chip" data-filter="fSchaal" data-value="Peuterschaal">Peuterschaal</button>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8B7B64;">Materiaal</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+        <button type="button" class="chip active" data-filter="fMateriaal" data-value="Alle">Alle</button>
+        <button type="button" class="chip" data-filter="fMateriaal" data-value="Merinowol">Merinowol</button>
+        <button type="button" class="chip" data-filter="fMateriaal" data-value="Outdoor">Outdoor</button>
+        <button type="button" class="chip" data-filter="fMateriaal" data-value="Mousseline">Mousseline</button>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8B7B64;">Seizoen</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+        <button type="button" class="chip active" data-filter="fSeizoen" data-value="Alle">Alle</button>
+        <button type="button" class="chip" data-filter="fSeizoen" data-value="Zomer">Zomer</button>
+        <button type="button" class="chip" data-filter="fSeizoen" data-value="Winter">Winter</button>
+        <button type="button" class="chip" data-filter="fSeizoen" data-value="Allround">Allround</button>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8B7B64;">Kleur</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+        <button type="button" class="chip active" data-filter="fKleur" data-value="Alle">Alle</button>
+        <button type="button" class="chip" data-filter="fKleur" data-value="Mosgroen">Mosgroen</button>
+        <button type="button" class="chip" data-filter="fKleur" data-value="Saliegroen">Saliegroen</button>
+        <button type="button" class="chip" data-filter="fKleur" data-value="Taupe">Taupe</button>
+        <button type="button" class="chip" data-filter="fKleur" data-value="Oudroze">Oudroze</button>
+        <button type="button" class="chip" data-filter="fKleur" data-value="Bruinrood">Bruinrood</button>
+        <button type="button" class="chip" data-filter="fKleur" data-value="Wijnrood">Wijnrood</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+    <span id="shop-count" style="font-size: 12.5px; color: #7E6E58;">6 hoezen</span>
+    <span style="font-size: 12.5px; color: #7E6E58;">Kleine series — kleuren wisselen per seizoen</span>
+  </div>
+
+  <div id="shop-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: clamp(18px, 2.4vw, 32px);">
+    <a data-product href="product.html?materiaal=Merinowol&schaal=Babyschaal" data-schaal="Babyschaal" data-materiaal="Merinowol" data-seizoen="Winter,Allround" data-kleuren="Mosgroen,Saliegroen,Taupe,Oudroze,Bruinrood,Wijnrood" style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="aspect-ratio: 4 / 5; overflow: hidden; background: #E5DED0;">
+        <img src="assets/stof-wolfleece-sq.jpg" alt="Merinowol hoes voor Melia babyschaal" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8B7B64;">Babyschaal · Winter · Allround</span>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 21px; line-height: 1.28;">Merinowol hoes voor Melia babyschaal</span>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <span style="font-size: 14px;">€79,00</span>
+          <span style="font-size: 12px; color: #7E6E58;">6 kleuren</span>
+        </div>
+        <span style="font-size: 11.5px; letter-spacing: 0.08em; color: #6E7A5E;">Op voorraad</span>
+      </div>
+    </a>
+    <a data-product href="product.html?materiaal=Merinowol&schaal=Peuterschaal" data-schaal="Peuterschaal" data-materiaal="Merinowol" data-seizoen="Winter,Allround" data-kleuren="Mosgroen,Saliegroen,Taupe,Oudroze,Bruinrood,Wijnrood" style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="aspect-ratio: 4 / 5; overflow: hidden; background: #E5DED0;">
+        <img src="assets/stof-wolfleece-sq.jpg" alt="Merinowol hoes voor Melia peuterschaal" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8B7B64;">Peuterschaal · Winter · Allround</span>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 21px; line-height: 1.28;">Merinowol hoes voor Melia peuterschaal</span>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <span style="font-size: 14px;">€89,00</span>
+          <span style="font-size: 12px; color: #7E6E58;">6 kleuren</span>
+        </div>
+        <span style="font-size: 11.5px; letter-spacing: 0.08em; color: #6E7A5E;">Op voorraad</span>
+      </div>
+    </a>
+    <a data-product href="product.html?materiaal=Outdoor&schaal=Babyschaal" data-schaal="Babyschaal" data-materiaal="Outdoor" data-seizoen="Winter,Allround" data-kleuren="Mosgroen,Taupe,Bruinrood,Wijnrood" style="display: flex; flex-direction: column; gap: 14px;">
+      <div class="ph ph-alt" style="aspect-ratio: 4 / 5; padding: 18px;">
+        <span class="ph-text" style="font-size: 10px; line-height: 1.95; max-width: 26ch;">1200×1500 · outdoorhoes in babyschaal, bovenaanzicht</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8B7B64;">Babyschaal · Winter · Allround</span>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 21px; line-height: 1.28;">Outdoor hoes voor Melia babyschaal</span>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <span style="font-size: 14px;">€75,00</span>
+          <span style="font-size: 12px; color: #7E6E58;">4 kleuren</span>
+        </div>
+        <span style="font-size: 11.5px; letter-spacing: 0.08em; color: #6E7A5E;">Op voorraad</span>
+      </div>
+    </a>
+    <a data-product href="product.html?materiaal=Outdoor&schaal=Peuterschaal" data-schaal="Peuterschaal" data-materiaal="Outdoor" data-seizoen="Winter,Allround" data-kleuren="Mosgroen,Taupe,Bruinrood,Wijnrood" style="display: flex; flex-direction: column; gap: 14px;">
+      <div class="ph ph-alt" style="aspect-ratio: 4 / 5; padding: 18px;">
+        <span class="ph-text" style="font-size: 10px; line-height: 1.95; max-width: 26ch;">1200×1500 · outdoorhoes in peuterschaal, bovenaanzicht</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8B7B64;">Peuterschaal · Winter · Allround</span>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 21px; line-height: 1.28;">Outdoor hoes voor Melia peuterschaal</span>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <span style="font-size: 14px;">€85,00</span>
+          <span style="font-size: 12px; color: #7E6E58;">4 kleuren</span>
+        </div>
+        <span style="font-size: 11.5px; letter-spacing: 0.08em; color: #6E7A5E;">Op voorraad</span>
+      </div>
+    </a>
+    <a data-product href="product.html?materiaal=Mousseline&schaal=Babyschaal" data-schaal="Babyschaal" data-materiaal="Mousseline" data-seizoen="Zomer" data-kleuren="Saliegroen,Taupe,Oudroze" style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="aspect-ratio: 4 / 5; overflow: hidden; background: #E5DED0;">
+        <img src="assets/stoffen-flatlay.jpg" alt="Mousseline hoes voor Melia babyschaal" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8B7B64;">Babyschaal · Zomer</span>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 21px; line-height: 1.28;">Mousseline hoes voor Melia babyschaal</span>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <span style="font-size: 14px;">€59,00</span>
+          <span style="font-size: 12px; color: #7E6E58;">3 kleuren</span>
+        </div>
+        <span style="font-size: 11.5px; letter-spacing: 0.08em; color: #6E7A5E;">Op voorraad</span>
+      </div>
+    </a>
+    <a data-product href="product.html?materiaal=Mousseline&schaal=Peuterschaal" data-schaal="Peuterschaal" data-materiaal="Mousseline" data-seizoen="Zomer" data-kleuren="Saliegroen,Taupe,Oudroze" style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="aspect-ratio: 4 / 5; overflow: hidden; background: #E5DED0;">
+        <img src="assets/stoffen-flatlay.jpg" alt="Mousseline hoes voor Melia peuterschaal" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #8B7B64;">Peuterschaal · Zomer</span>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 21px; line-height: 1.28;">Mousseline hoes voor Melia peuterschaal</span>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <span style="font-size: 14px;">€65,00</span>
+          <span style="font-size: 12px; color: #7E6E58;">3 kleuren</span>
+        </div>
+        <span style="font-size: 11.5px; letter-spacing: 0.08em; color: #6E7A5E;">Laatste exemplaren</span>
+      </div>
+    </a>
+  </div>
+</main>
