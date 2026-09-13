@@ -298,8 +298,10 @@ summary::marker { content: ''; }
 @media (max-width: 640px) {
   .btn { padding: 13px 24px; }
 
-  /* keep tall portrait photo frames from swallowing the whole viewport on phones */
-  [style*="aspect-ratio: 4 / 5"] { aspect-ratio: 4 / 3 !important; }
-  [style*="aspect-ratio: 3 / 4"] { aspect-ratio: 4 / 3 !important; }
-  [style*="min-height: clamp(330px"] { min-height: clamp(260px, 66vw, 660px) !important; }
+  /* photo frames: cap the height and round the corners so they read as tidy
+     cards on a phone instead of tall, full-width crops */
+  [style*="aspect-ratio"][style*="overflow: hidden"] { max-height: 230px; border-radius: 12px; }
+  /* the hero <img> is height:100% inside an auto-height box, so on a phone it
+     falls back to its full intrinsic height (~460px); pin a trimmer height */
+  [style*="min-height: clamp(330px"] { height: 300px !important; min-height: 0 !important; }
 }
