@@ -1,10 +1,13 @@
   <div class="announce">Gratis verzending in Nederland boven €100 · Afhalen in Hooglanderveen · Reparatieservice vanaf €15</div>
 
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="bar">
-      <a href="index.html" class="wordmark">Studio Kiem</a>
-      <nav>
-        <button type="button" class="shop-toggle" id="shop-toggle" aria-expanded="false">Shop <span style="font-size: 8px; opacity: 0.6;">▾</span></button>
+      <a href="index.html" class="wordmark" style="display: flex; align-items: center; gap: 13px;">
+        <img src="assets/logo-mark.png" alt="" style="height: 54px; width: auto; display: block;" />
+        <span>Studio Kiemt</span>
+      </a>
+      <nav id="site-nav">
+        <a href="shop.html" class="shop-toggle" id="shop-toggle" aria-expanded="false" aria-controls="shop-flyout">Shop <span style="font-size: 8px; opacity: 0.6;">▾</span></a>
         <a href="compatibiliteit.html">Compatibiliteit</a>
         <a href="onderhoud.html">Onderhoud</a>
         <a href="faq.html">FAQ</a>
@@ -18,7 +21,7 @@
         <div class="col">
           <span class="eyebrow">Per schaal</span>
           <a href="babyschaal-hoezen.html" class="big">Babyschaal hoezen</a>
-          <a href="shop.html" class="big">Peuterschaal hoezen</a>
+          <a href="shop.html?schaal=Peuterschaal" class="big">Peuterschaal hoezen</a>
         </div>
         <div class="col">
           <span class="eyebrow">Per materiaal</span>
@@ -40,3 +43,4 @@
       </div>
     </div>
   </header>
+

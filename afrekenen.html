@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Afrekenen — Studio Kiem</title>
+<title>Afrekenen — Studio Kiemt</title>
 <meta name="description" content="Rond je bestelling af." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,11 +13,14 @@
 <body>
   <div class="announce">Gratis verzending in Nederland boven €100 · Afhalen in Hooglanderveen · Reparatieservice vanaf €15</div>
 
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="bar">
-      <a href="index.html" class="wordmark">Studio Kiem</a>
-      <nav>
-        <button type="button" class="shop-toggle" id="shop-toggle" aria-expanded="false">Shop <span style="font-size: 8px; opacity: 0.6;">▾</span></button>
+      <a href="index.html" class="wordmark" style="display: flex; align-items: center; gap: 13px;">
+        <img src="assets/logo-mark.png" alt="" style="height: 54px; width: auto; display: block;" />
+        <span>Studio Kiemt</span>
+      </a>
+      <nav id="site-nav">
+        <a href="shop.html" class="shop-toggle" id="shop-toggle" aria-expanded="false" aria-controls="shop-flyout">Shop <span style="font-size: 8px; opacity: 0.6;">▾</span></a>
         <a href="compatibiliteit.html">Compatibiliteit</a>
         <a href="onderhoud.html">Onderhoud</a>
         <a href="faq.html">FAQ</a>
@@ -31,7 +34,7 @@
         <div class="col">
           <span class="eyebrow">Per schaal</span>
           <a href="babyschaal-hoezen.html" class="big">Babyschaal hoezen</a>
-          <a href="shop.html" class="big">Peuterschaal hoezen</a>
+          <a href="shop.html?schaal=Peuterschaal" class="big">Peuterschaal hoezen</a>
         </div>
         <div class="col">
           <span class="eyebrow">Per materiaal</span>
@@ -53,6 +56,7 @@
       </div>
     </div>
   </header>
+
 <main id="checkout-app" style="max-width: 1340px; margin: 0 auto; padding: clamp(26px, 4vw, 48px) clamp(20px, 4vw, 56px) clamp(52px, 7vw, 100px);">
   <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: clamp(24px, 3vw, 40px);">
     <h1 style="margin: 0; font-family: 'EB Garamond', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.08;">Afrekenen</h1>
@@ -131,7 +135,7 @@
   <footer class="site-footer">
     <div class="cols">
       <div class="col">
-        <span class="serif" style="font-size: 24px; letter-spacing: 0.05em; color: #FFFDF9;">Studio Kiem</span>
+        <img src="assets/logo-mark-light.png" alt="Studio Kiemt" style="width: 172px; max-width: 100%; height: auto; display: block; margin-bottom: 4px;" />
         <span class="muted" style="line-height: 1.65; max-width: 32ch;">Specialist in hoezen voor bakfietsschalen. Ontworpen voor Melia baby- en peuterschalen.</span>
       </div>
       <div class="col">
@@ -152,18 +156,18 @@
         <a href="reparatieservice.html" class="footer-link">Reparatieservice</a>
         <span class="muted">Verzending &amp; afhalen</span>
         <span class="muted">Retourneren</span>
-        <a href="over-ons.html" class="footer-link">Over Studio Kiem</a>
+        <a href="over-ons.html" class="footer-link">Over Studio Kiemt</a>
       </div>
       <div class="col">
         <span class="eyebrow">Contact</span>
-        <span class="muted">hallo@studiokiem.nl</span>
-        <span class="muted">Instagram @studiokiem</span>
+        <span class="muted">hallo@studiokiemt.nl</span>
+        <span class="muted">Instagram @studiokiemt</span>
         <span class="muted">Afhalen op afspraak,<br />Hooglanderveen</span>
         <span style="font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(230,223,210,0.45);">gegevens nog te bevestigen</span>
       </div>
     </div>
     <div class="bottom">
-      <span>© 2026 Studio Kiem · KvK 00000000 · Alle prijzen inclusief btw</span>
+      <span>© 2026 Studio Kiemt · KvK 00000000 · Alle prijzen inclusief btw</span>
       <span style="display: flex; flex-wrap: wrap; gap: 20px;">Algemene voorwaarden · Privacy · Verzending</span>
     </div>
   </footer>

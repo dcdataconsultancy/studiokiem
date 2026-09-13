@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Compatibiliteit — Studio Kiem</title>
+<title>Compatibiliteit — Studio Kiemt</title>
 <meta name="description" content="Past deze hoes op jouw schaal? Bekijk de Melia babyschaal en peuterschaal waarvan we de pasvorm hebben gecontroleerd." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,11 +13,14 @@
 <body>
   <div class="announce">Gratis verzending in Nederland boven €100 · Afhalen in Hooglanderveen · Reparatieservice vanaf €15</div>
 
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="bar">
-      <a href="index.html" class="wordmark">Studio Kiem</a>
-      <nav>
-        <button type="button" class="shop-toggle" id="shop-toggle" aria-expanded="false">Shop <span style="font-size: 8px; opacity: 0.6;">▾</span></button>
+      <a href="index.html" class="wordmark" style="display: flex; align-items: center; gap: 13px;">
+        <img src="assets/logo-mark.png" alt="" style="height: 54px; width: auto; display: block;" />
+        <span>Studio Kiemt</span>
+      </a>
+      <nav id="site-nav">
+        <a href="shop.html" class="shop-toggle" id="shop-toggle" aria-expanded="false" aria-controls="shop-flyout">Shop <span style="font-size: 8px; opacity: 0.6;">▾</span></a>
         <a href="compatibiliteit.html">Compatibiliteit</a>
         <a href="onderhoud.html">Onderhoud</a>
         <a href="faq.html">FAQ</a>
@@ -31,7 +34,7 @@
         <div class="col">
           <span class="eyebrow">Per schaal</span>
           <a href="babyschaal-hoezen.html" class="big">Babyschaal hoezen</a>
-          <a href="shop.html" class="big">Peuterschaal hoezen</a>
+          <a href="shop.html?schaal=Peuterschaal" class="big">Peuterschaal hoezen</a>
         </div>
         <div class="col">
           <span class="eyebrow">Per materiaal</span>
@@ -53,6 +56,7 @@
       </div>
     </div>
   </header>
+
 <main>
   <section style="max-width: 1340px; margin: 0 auto; padding: clamp(26px, 4vw, 48px) clamp(20px, 4vw, 56px) clamp(30px, 4vw, 52px);">
     <div style="display: flex; gap: 10px; font-size: 11.5px; letter-spacing: 0.06em; color: #8B7B64; margin-bottom: 26px;">
@@ -61,14 +65,12 @@
     <div style="display: flex; flex-direction: column; gap: 18px; max-width: 64ch;">
       <span style="font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase; color: #8B7B64;">Keuzehulp</span>
       <h1 style="margin: 0; font-family: 'EB Garamond', Georgia, serif; font-weight: 400; font-size: clamp(30px, 4.2vw, 54px); line-height: 1.05; text-wrap: pretty;">Past deze hoes op jouw schaal?</h1>
-      <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #554E45; text-wrap: pretty;">Studio Kiem maakt op dit moment hoezen voor de Melia babyschaal en de Melia peuterschaal. Die schalen worden in veel verschillende bakfietsen en fietskarren gebruikt. We noemen alleen schalen waarvan we de pasvorm zelf hebben gecontroleerd — geen aannames.</p>
+      <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #554E45; text-wrap: pretty;">Studio Kiemt maakt op dit moment hoezen voor de Melia babyschaal en de Melia peuterschaal. Die schalen worden in veel verschillende bakfietsen en fietskarren gebruikt. We noemen alleen schalen waarvan we de pasvorm zelf hebben gecontroleerd — geen aannames.</p>
     </div>
   </section>
   <section style="max-width: 1340px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 56px) clamp(52px, 7vw, 100px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(18px, 2.4vw, 32px);">
     <a href="compatibiliteit-babyschaal.html" class="tile-hover" style="border: 1px solid rgba(52,48,42,0.16); background: #FFFDF9; display: flex; flex-direction: column;">
-      <div class="ph" style="aspect-ratio: 3 / 2; padding: 20px;">
-        <span class="ph-text" style="font-size: 10px; line-height: 1.95; max-width: 30ch;">1800×1200 · melia babyschaal zonder hoes, driekwart aanzicht, wit vlak</span>
-      </div>
+      <div style="aspect-ratio: 3 / 2; overflow: hidden; background: #E5DED0;" data-briefing="1800×1200 · melia babyschaal zonder hoes, driekwart aanzicht, wit vlak"><img src="assets/sfeer-schaal-baby.jpg" alt="Melia babyschaal, driekwart aanzicht" style="width: 100%; height: 100%; object-fit: cover; display: block;" /></div>
       <div style="padding: 24px; display: flex; flex-direction: column; gap: 10px;">
         <span style="font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E7A5E;">Pasvorm gecontroleerd</span>
         <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 25px;">Melia babyschaal</span>
@@ -76,9 +78,7 @@
       </div>
     </a>
     <a href="compatibiliteit-peuterschaal.html" class="tile-hover" style="border: 1px solid rgba(52,48,42,0.16); background: #FFFDF9; display: flex; flex-direction: column;">
-      <div class="ph" style="aspect-ratio: 3 / 2; padding: 20px;">
-        <span class="ph-text" style="font-size: 10px; line-height: 1.95; max-width: 30ch;">1800×1200 · melia peuterschaal zonder hoes, driekwart aanzicht, wit vlak</span>
-      </div>
+      <div style="aspect-ratio: 3 / 2; overflow: hidden; background: #E5DED0;" data-briefing="1800×1200 · melia peuterschaal zonder hoes, driekwart aanzicht, wit vlak"><img src="assets/sfeer-schaal-peuter.jpg" alt="Melia peuterschaal, driekwart aanzicht" style="width: 100%; height: 100%; object-fit: cover; display: block;" /></div>
       <div style="padding: 24px; display: flex; flex-direction: column; gap: 10px;">
         <span style="font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #6E7A5E;">Pasvorm gecontroleerd</span>
         <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 25px;">Melia peuterschaal</span>
@@ -95,7 +95,7 @@
   <footer class="site-footer">
     <div class="cols">
       <div class="col">
-        <span class="serif" style="font-size: 24px; letter-spacing: 0.05em; color: #FFFDF9;">Studio Kiem</span>
+        <img src="assets/logo-mark-light.png" alt="Studio Kiemt" style="width: 172px; max-width: 100%; height: auto; display: block; margin-bottom: 4px;" />
         <span class="muted" style="line-height: 1.65; max-width: 32ch;">Specialist in hoezen voor bakfietsschalen. Ontworpen voor Melia baby- en peuterschalen.</span>
       </div>
       <div class="col">
@@ -116,18 +116,18 @@
         <a href="reparatieservice.html" class="footer-link">Reparatieservice</a>
         <span class="muted">Verzending &amp; afhalen</span>
         <span class="muted">Retourneren</span>
-        <a href="over-ons.html" class="footer-link">Over Studio Kiem</a>
+        <a href="over-ons.html" class="footer-link">Over Studio Kiemt</a>
       </div>
       <div class="col">
         <span class="eyebrow">Contact</span>
-        <span class="muted">hallo@studiokiem.nl</span>
-        <span class="muted">Instagram @studiokiem</span>
+        <span class="muted">hallo@studiokiemt.nl</span>
+        <span class="muted">Instagram @studiokiemt</span>
         <span class="muted">Afhalen op afspraak,<br />Hooglanderveen</span>
         <span style="font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(230,223,210,0.45);">gegevens nog te bevestigen</span>
       </div>
     </div>
     <div class="bottom">
-      <span>© 2026 Studio Kiem · KvK 00000000 · Alle prijzen inclusief btw</span>
+      <span>© 2026 Studio Kiemt · KvK 00000000 · Alle prijzen inclusief btw</span>
       <span style="display: flex; flex-wrap: wrap; gap: 20px;">Algemene voorwaarden · Privacy · Verzending</span>
     </div>
   </footer>

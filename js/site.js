@@ -1,4 +1,4 @@
-// Studio Kiem — shared prototype logic (cart, catalog, header, page widgets).
+// Studio Kiemt — shared prototype logic (cart, catalog, header, page widgets).
 // This is a client-side demo: the cart lives in localStorage and checkout does
 // not charge anything. Ported 1:1 from the Claude Design prototype's Component class.
 (function () {
@@ -33,7 +33,7 @@
   var FOTOS = {
     Merinowol: "assets/stof-wolfleece-sq.jpg",
     Mousseline: "assets/stoffen-flatlay.jpg",
-    Outdoor: ""
+    Outdoor: "assets/sfeer-outdoor.jpg"
   };
   var KORTINGSCODE = "KIEM10";
 
@@ -57,7 +57,7 @@
           kleurTekst: MAT_KLEUREN[m].length + " kleuren",
           foto: FOTOS[m],
           heeftFoto: !!FOTOS[m],
-          briefing: m === "Outdoor" ? "1200×1500 · outdoorhoes in " + s.toLowerCase() + ", bovenaanzicht" : "",
+          briefing: "",
           voorraad: m === "Mousseline" && s === "Peuterschaal" ? "Laatste exemplaren" : "Op voorraad"
         });
       });
@@ -159,21 +159,33 @@
   function initHeader() {
     var toggle = document.getElementById("shop-toggle");
     var flyout = document.getElementById("shop-flyout");
+    var header = document.getElementById("site-header");
+    var nav = document.getElementById("site-nav");
     if (!toggle || !flyout) return;
-    toggle.addEventListener("click", function () {
-      var willOpen = flyout.hidden;
-      flyout.hidden = !willOpen;
-      toggle.setAttribute("aria-expanded", String(willOpen));
-    });
-    flyout.addEventListener("mouseleave", function () {
+
+    function open() {
+      flyout.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+    }
+    function close() {
       flyout.hidden = true;
       toggle.setAttribute("aria-expanded", "false");
-    });
-    document.addEventListener("click", function (e) {
-      if (!flyout.hidden && !flyout.contains(e.target) && e.target !== toggle) {
-        flyout.hidden = true;
-        toggle.setAttribute("aria-expanded", "false");
-      }
+    }
+
+    // Hover (en toetsenbordfocus) opent de dropdown; klikken volgt de link naar shop.html.
+    toggle.addEventListener("mouseenter", open);
+    toggle.addEventListener("focus", open);
+    toggle.addEventListener("click", close);
+
+    if (nav) {
+      nav.querySelectorAll("a").forEach(function (a) {
+        if (a !== toggle) a.addEventListener("mouseenter", close);
+      });
+    }
+    if (header) header.addEventListener("mouseleave", close);
+    flyout.addEventListener("mouseleave", close);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") close();
     });
   }
 
@@ -269,7 +281,7 @@
       var ok = beschikbaar();
 
       if (els.title) els.title.textContent = titel;
-      if (els.eyebrow) els.eyebrow.textContent = "Studio Kiem · " + state.pSchaal;
+      if (els.eyebrow) els.eyebrow.textContent = "Studio Kiemt · " + state.pSchaal;
       if (els.breadcrumb) els.breadcrumb.textContent = titel;
       if (els.price) els.price.textContent = fmt(prijs);
       if (els.priceSticky) els.priceSticky.textContent = fmt(prijs) + " incl. btw";
@@ -288,8 +300,9 @@
           els.photoWrap.innerHTML = '<img src="' + foto + '" alt="' + titel + '" style="width: 100%; height: 100%; object-fit: cover; display: block;" />';
           els.photoWrap.classList.remove("ph");
         } else {
-          els.photoWrap.classList.add("ph");
-          els.photoWrap.innerHTML = '<span class="ph-text" style="font-size: 10.5px; line-height: 2; max-width: 28ch;">hoofdfoto 1600×2000 · hoes in de melia schaal, licht van links</span>';
+          els.photoWrap.classList.remove("ph");
+          els.photoWrap.setAttribute("data-briefing", "hoofdfoto 1600×2000 · hoes in de melia schaal, licht van links");
+          els.photoWrap.innerHTML = '<img src="assets/sfeer-product-main.jpg" alt="' + titel + '" style="width: 100%; height: 100%; object-fit: cover; display: block;" />';
         }
       }
 
