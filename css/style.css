@@ -304,4 +304,20 @@ summary::marker { content: ''; }
   /* the hero <img> is height:100% inside an auto-height box, so on a phone it
      falls back to its full intrinsic height (~460px); pin a trimmer height */
   [style*="min-height: clamp(330px"] { height: 300px !important; min-height: 0 !important; }
+
+  /* product buy-bar: a clean fixed bottom action bar instead of a sticky panel
+     that floats over the description while scrolling */
+  .buy-bar {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 70;
+    background: var(--cream-card);
+    border-bottom: none;
+    box-shadow: 0 -6px 20px rgba(52, 48, 42, 0.13);
+  }
+  .buy-bar > div { padding-top: 10px; padding-bottom: 10px; }
+  /* reserve space so the fixed bar never covers the footer / page end */
+  body:has(.buy-bar) { padding-bottom: 78px; }
 }
