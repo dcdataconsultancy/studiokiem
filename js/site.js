@@ -141,8 +141,10 @@
   }
 
   function updateCartCount() {
-    var el = document.getElementById("cart-count");
-    if (el) el.textContent = String(cartCount(getCart()));
+    var count = String(cartCount(getCart()));
+    document.querySelectorAll(".cart-count").forEach(function (el) {
+      el.textContent = count;
+    });
   }
 
   var toastTimer = null;
@@ -187,6 +189,28 @@
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") close();
     });
+
+    // Mobile: hamburger toggles the stacked dropdown menu.
+    var navToggle = document.getElementById("nav-toggle");
+    if (navToggle && nav) {
+      var closeNav = function () {
+        nav.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      };
+      navToggle.addEventListener("click", function () {
+        var isOpen = nav.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+      nav.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", closeNav);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeNav();
+      });
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 860) closeNav();
+      });
+    }
   }
 
   // ---- shop page: client-side filtering of the static product grid ----

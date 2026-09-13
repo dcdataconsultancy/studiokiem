@@ -20,14 +20,18 @@
         <span>Studio Kiemt</span>
       </a>
       <nav id="site-nav">
-        <a href="shop.html" class="shop-toggle" id="shop-toggle" aria-expanded="false" aria-controls="shop-flyout">Shop <span style="font-size: 8px; opacity: 0.6;">▾</span></a>
+        <a href="shop.html" class="shop-toggle" id="shop-toggle" aria-expanded="false" aria-controls="shop-flyout">Shop <span class="caret" style="font-size: 8px; opacity: 0.6;">▾</span></a>
         <a href="compatibiliteit.html">Compatibiliteit</a>
         <a href="onderhoud.html">Onderhoud</a>
         <a href="faq.html">FAQ</a>
         <a href="kennisbank.html">Inspiratie</a>
         <a href="over-ons.html">Over</a>
+        <a href="winkelwagen.html" class="nav-cart">Winkelwagen (<span class="cart-count">0</span>)</a>
       </nav>
-      <a href="winkelwagen.html" style="font-size: 11.5px; letter-spacing: 0.13em; text-transform: uppercase; white-space: nowrap;">Winkelwagen (<span id="cart-count">0</span>)</a>
+      <a href="winkelwagen.html" class="bar-cart" style="font-size: 11.5px; letter-spacing: 0.13em; text-transform: uppercase; white-space: nowrap;">Winkelwagen (<span class="cart-count">0</span>)</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu openen">
+        <span class="nav-toggle-box" aria-hidden="true"></span>
+      </button>
     </div>
     <div class="shop-flyout" id="shop-flyout" hidden>
       <div class="grid">
@@ -56,7 +60,6 @@
       </div>
     </div>
   </header>
-
 <main>
   <section style="max-width: 1340px; margin: 0 auto; padding: clamp(26px, 4vw, 48px) clamp(20px, 4vw, 56px) clamp(52px, 7vw, 100px);">
     <div style="display: flex; gap: 10px; font-size: 11.5px; letter-spacing: 0.06em; color: #8B7B64; margin-bottom: 26px;">
